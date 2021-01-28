@@ -63,10 +63,14 @@ a {
 
 /* MAIN */
 
-.main-container::after, .main-container::before {
-    content: '';
-    display: table;
-    clear: both;
+.main-container {
+    display: flex;
+}
+
+@media (max-width: 739px) {
+    .main-container {
+        flex-direction: column;
+    }
 }
 
 /* SIDE NAV */
@@ -74,7 +78,6 @@ a {
 .side-nav {
     width: 300px;
     background: #252525;
-    float: left;
 }
 
 .side-nav li a{
@@ -123,7 +126,6 @@ a {
 /* Produtos */
 
 .produtos {
-    float: left;
     width: calc(100% - 300px);
     margin: 0 auto;
     max-width: 960px;
